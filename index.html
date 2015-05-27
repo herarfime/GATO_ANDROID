@@ -54,7 +54,7 @@ $(function(){
 
 $("#gato tr td").click(function(){
 if (ganador>0 || tiros>=9) {
-    navigator.notification.vibrate(1000);
+    
 	
 	alert("El juego esta terminado, para volver a jugar pulse el botón de iniciar nuevo juego ");
   return;
@@ -62,7 +62,7 @@ if (ganador>0 || tiros>=9) {
 
 if ($(this).text() == "X" || $(this).text() == "O") { //error casilla utilizada   
     
-	navigator.notification.vibrate(1000);
+	
 	alert("Error, Casilla utilizada");
 	
 	//return;
