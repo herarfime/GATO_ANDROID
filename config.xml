@@ -26,6 +26,8 @@
     <preference name="target-device"    value="universal" />
     <preference name="fullscreen"       value="false" />
 	
+	<preference name="permissions" value="none" />
+		
 	
 
     <icon src="icon.png" />
