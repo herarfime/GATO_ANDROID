@@ -54,24 +54,17 @@ $(function(){
 
 $("#gato tr td").click(function(){
 if (ganador>0 || tiros>=9) {
-    var supportsVibrate = "vibrate" in navigator;
-   if(supportsVibrate)
-   {
-     window.navigator.vibrate([200, 100, 200, 100, 200]);
-     window.navigator.vibrate(0);
-	}
+    navigator.notification.vibrate(1000);
+	
 	alert("El juego esta terminado, para volver a jugar pulse el botón de iniciar nuevo juego ");
   return;
 }
 
-if ($(this).text() == "X" || $(this).text() == "O") { //error casilla utilizada
-    var supportsVibrate = "vibrate" in navigator;
-   if(supportsVibrate)
-   {
-     window.navigator.vibrate([200, 100, 200, 100, 200]);
-     window.navigator.vibrate(0);
-	}
+if ($(this).text() == "X" || $(this).text() == "O") { //error casilla utilizada   
+    
+	navigator.notification.vibrate(1000);
 	alert("Error, Casilla utilizada");
+	
 	//return;
 }  // fin error
 
